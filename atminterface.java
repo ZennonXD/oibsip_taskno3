@@ -192,8 +192,6 @@ class ATM implements ATMInterface
         String recipientacno = scanner.next();
         System.out.print("How much amount you would like to transfer: ");
         double amount = scanner.nextDouble();
-
-        // Dummy check for recipient user id. You can implement a proper check.
         User recipient = new User(recipientacno, "", "");
         user.transfer(recipient, amount);
     }
@@ -225,7 +223,7 @@ public class Main
             System.out.println("3. Quit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
